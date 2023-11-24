@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
                 num_packets_per_send = atoi(optarg);
                 break;
             default:
-                printf("\nUsage: udpgen [-d] [-i] [-h host] [-p port] [-r rate] [-t threads] [-z packets] [-x type]\n\n");
+                printf("\nUsage: udpgen [-d] [-i] [-h host] [-p port] [-r rate] [-t threads] [-z packets] [-x type] [-s packets] [-S seconds]\n\n");
                 printf("  -x: Type of payload: snmp, syslog, netflow5, netflow9 (default: syslog)\n");
                 printf("  -d: Daemonize (default: false)\n");
                 printf("  -i: Disable interactivity (default: false)\n");
@@ -81,6 +81,8 @@ int main(int argc, char **argv) {
                 printf("  -p: Target port (default: depends on mode)\n");
                 printf("  -r: Rate - number of packets per second to generate (default: 10000)\n");
                 printf("             set the rate to 0 in order to disable rate limiting\n");
+                printf("  -s: Send X number of packets and then stop\n");
+                printf("  -S: Send packets for X number of seconds and then stop");
                 printf("  -t: Number of threads used to generate packets (default: 1)\n");
                 printf("  -z: Number of packets per iteration (default: 1)\n");
                 printf("             increase this when sending packets at a high rate\n\n");
