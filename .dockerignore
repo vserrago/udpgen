@@ -1,5 +1,10 @@
+# TODO: In Circle-CI too
+Dockerfile
+LICENSE
+README*
+build/
 # Ignore everything
-*
+#*
 
 # Except our build artifact
-!build/**
+#!build/**
